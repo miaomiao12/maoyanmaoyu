@@ -1,0 +1,102 @@
+<template>
+  <div class="hello">
+    <common-header></common-header>
+      <div class="hot-topic">
+        <h2>| 热门话题</h2>
+        <ul>
+          <li>话题1</li>
+          <li>话题1</li>
+          <li>话题1</li>
+        </ul>
+      </div>
+      <div class="talent-wall">
+        <h3>| 达人墙
+          <span class="more-talent">
+            <router-link to="/talent">&gt</router-link>
+          </span>
+        </h3>
+        <ul>
+          <li>大人1</li>
+          <li>达人1</li>
+          <li>大人8</li>
+        </ul>
+      </div>
+      <trend-list></trend-list>
+    <hot-new></hot-new>
+    <router-view></router-view>
+    <!--<index-hot-article></index-hot-article>-->
+    <common-footer></common-footer>
+  </div>
+</template>
+
+<script>
+  import CommonFooter from '../../components/CommonFooter'
+  import CommonHeader from '../../components/CommonHeader'
+  import IndexHotArticle from '../index/IndexHotArticle'
+  import HotNew from './HotNew'
+  import TrendList from './TrendList'
+  import Axios from "axios"
+export default {
+  name: 'hello',
+    data () {
+      return {
+        users:[],
+        url:'http://localhost:3000/user'
+      }
+  },
+  components:{
+      CommonFooter,
+      CommonHeader,
+      IndexHotArticle,
+      HotNew,
+      TrendList
+  },
+  mounted:function() {
+      Axios.get(this.url)
+      .then((res)=>{
+          this.users = res.data;
+          console.log(res.data);
+       });
+    }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  @import "../../assets/css/reset.css";
+  .trend-list{
+    margin-top: 0.1rem;
+  }
+.talent-wall ul{
+    display: flex;
+    height: 1rem;
+    background: #723377;
+  }
+
+  .hot-topic{
+    margin-top: 1.1rem;
+    height: 1.6rem;
+    background: #888888;
+  }
+  .hot-topic h2,.talent-wall h2{
+    font-size: 0.25rem;
+    margin-left: 0.1rem;
+  }
+  .talent-wall{
+    /*height: 1rem;*/
+    margin-top: 0.1rem;
+  }
+  .talent-wall ul li{
+    flex: 1;
+    /*height: 1.3rem;*/
+  }
+  .more-talent{
+    font-weight: bold;
+    font-size: 0.3rem;
+    /*float:right;*/
+    display: inline-block;
+    margin-top: -0.1rem;
+    position: absolute;
+    right: 0.1rem;
+  }
+</style>

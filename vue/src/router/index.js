@@ -1,21 +1,95 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Mint from 'mint-ui'
-import FooterTabs from '@/components/FooterTabs'
-import MyPage from '@/page/MyPage'
-Vue.use(Router)
-Vue.use(Mint)
+import Login from  '@/pages/Login'
+import Reg from  '@/pages/Reg'
+import Index from '@/pages/Index'
+import Trend from '@/pages/trend/Trend'
+import TrendArticle from '@/pages/trend/TrendArticle'
+import TrendVideo from '@/pages/trend/TrendVideo'
+import TrendHelp from '@/pages/trend/TrendHelp'
+import NewArticle from '@/pages/trend/NewArticle'
+import HotArticle from '@/pages/trend/HotArticle'
+import Talent from '@/pages/trend/Talent'
+import DetailArticle from '@/pages/trend/DetailArticle'
 
+import MyPage from '@/pages/MyPage'
+
+Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      component: FooterTabs
+      path: '/login',
+      component: Login
     },
     {
-      path: '/mine',
-      component:MyPage
+      path: '/reg',
+      component: Reg
+    },
+    {
+      path:'/',
+      redirect: '/index'
+    },
+    {
+      path: '/index',
+      component: Index
+    },
+    {
+      path:'/trend/article',
+      redirect:'/trend/article/new'
+    },
+    {
+      path:'/trend/article',
+      component:TrendArticle,
+      children:[
+        { path: "/trend/article/new", component: NewArticle },
+        { path: "/trend/article/hot", component: HotArticle }
+      ]
+    },
+    {
+      path:'/trend/video',
+      redirect:'/trend/video/new'
+    },
+    {
+      path:'/trend/video',
+      component:TrendVideo,
+      children:[
+        { path: "/trend/video/new", component: NewArticle },
+        { path: "/trend/video/hot", component: HotArticle }
+      ]
+    },
+    {
+      path:'/trend/help',
+      redirect:'/trend/help/new'
+    },
+    {
+      path:'/trend/help',
+      component:TrendHelp,
+      children:[
+        { path: "/trend/help/new", component: NewArticle },
+        { path: "/trend/help/hot", component: HotArticle }
+      ]
+    },
+    {
+      path: '/trend',
+      redirect:"/trend/new"
+    },
+    {
+      path: '/trend',
+      component: Trend,
+      children: [
+        { path: "/trend/new", component: NewArticle },
+        { path: "/trend/hot", component: HotArticle }
+      ]
+    },
+    {
+      path:'/talent',
+      component:Talent
+    },
+    {
+      path:'/detail-article',
+      component:DetailArticle
     }
-  ]
+  ],
+  mode: 'history'
 })
