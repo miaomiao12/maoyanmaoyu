@@ -1,29 +1,57 @@
 <template>
-  <div class="login">
-    <form id="loginForm" action="" method="">
-      <img src="../assets/logo.png">
-      <input class="input" type="text" name="username" placeholder="账号">
-      <input class="input" type="password" name="password" placeholder="密码">
-      <button id="loginButton"><router-link to="/reg">登录</router-link></button>
-
-    </form>
+  <div id="loginForm" >
+    <img src="../assets/mao.jpg">
+    <input class="input" type="text" name="username" v-model="username" placeholder="  账号">
+    <hr>
+    <input class="input" type="password" name="password" v-model="password" placeholder="  密码">
+    <hr>
+    <button id="loginButton" @click="logining">登录</button>
+    <button id="nowreg"><router-link to="/reg">立即注册</router-link></button>
+    <span id="tishispan" class="nonespan">账号或密码错误</span>
   </div>
 </template>
 
 <script>
   import Axios from "axios";
-  import { Button } from 'mint-ui';
+//  import { Button } from 'mint-ui';
+  import jQuery from "../assets/js/jquery-1.12.4.min.js"
 
   export default {
     data () {
-    return {}
+      return {
+        username:"",
+        password:""
+      }
+    },
+    methods:{
+      logining:function(){
+        var _this=this;
+        Axios.get("http://localhost:3000/logining",{
+          params:{
+            username:this.username,
+            password:this.password
+          }
+        }).then((res)=>{
+          // console.log(JSON.parse(res.data));
+          var token = res.data;
+          console.log(token);
+          if(token == false){
+            $("#tishispan").removeClass("nonespan");
+            $("#tishispan").addClass("blockspan");
+          }else{
+            _this.$router.push("/index");
+          }
+        })
+      },
     }
+
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import "../assets/css/reset.css";
+
 
   h1, h2 {
     font-weight: normal;
@@ -42,22 +70,71 @@
   a {
     color: #42b983;
   }
+  input{
+    border:none;
+    outline:medium;
+  }
+  #loginForm{
+    width: 100%;
+    text-align: center;
+  }
+
   #loginForm img{
-    width: 640px;
-    height: 640px;
+    width: 100%;
   }
   .input{
-    width: 636px;
-    height: 100px;
-    margin-bottom: 20px;
-    font-size:24px;
-    line-height:100px;
+    width: 98%;
+    height: 1rem;
+    margin-top: 20px;
+    font-size: 0.3rem;
+    line-height:1rem;
+    border:10px solid block;
 
   }
   #loginButton{
-    width: 640px;
-    height: 100px;
-    font-size: 24px;
-  }
-</style>
+    width: 98%;
+    height: 1rem;
+    font-size: 0.3rem;
+    border: none;
 
+  }
+  #nowreg{
+    width: 98%;
+    height: 1rem;
+    font-size: 0.2rem;
+    background: #fff;
+    border: none;
+  }
+  .nonespan{
+    width: 100%;
+    height: 0.7rem;
+    font-size: 0.3rem;
+    color: #fff;
+    background: #41b883;
+    display: none;
+  }
+  .blockspan{
+    width: 100%;
+    height: 0.7rem;
+    font-size: 0.3rem;
+    color: #fff;
+    background: #41b883;
+    display: block;
+  }
+
+</style>
+<!--
+设置一下placeholder的样式，如：
+input::-webkit-input-placeholder {  /* WebKit browsers */
+    font-size: 24px;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 24px;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 24px;
+}
+input :-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 24px;
+}
+ -->

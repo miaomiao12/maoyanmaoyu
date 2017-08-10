@@ -11,6 +11,41 @@ class User extends CI_Controller {
 	public function test(){
 		$this->load->view('test');
 	}
+	public function reg(){
+        $one = 1;
+        $username=$this->input->get("username");
+        $password=$this->input->get("password");
+        $this->load->helper('date');
+        $this->load->model('User_model');
+        $datestring = '%Y-%m-%d - %h:%i';
+        $time = time();
+        $reg_time=mdate($datestring, $time);
+        $result=$this->User_model->add_user($username,$password,$reg_time);
+        if($result == true){
+            echo $one;
+        }
+    }
+    public function hasname(){//验证是否存在
+        $username=$this->input->get("username");
+        $this->load->model('User_model');
+        $result=$this->User_model->has_name($username);
+        echo $result;
+    }
+    public function CIlogining(){
+        $username=$this->input->get("username");
+        $password=$this->input->get("password");
+        $this->load->model('User_model');
+        $result=$this->User_model->login_ing($username,$password);
+        if($result){
+            $id=$result->u_id;
+            echo $id;
+        }else {
+            $value = false;
+            echo $value;
+        }
+        // echo json_encode($result);
+
+    }
 }
 
 	
