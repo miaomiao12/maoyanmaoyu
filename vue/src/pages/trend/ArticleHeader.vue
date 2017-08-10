@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <div class="articleheader">
-      <span class="back">
-        <router-link to="/trend">&lt</router-link>
+      <span class="back" @click="back">
+        &lt
       </span>
       <span class="category">
         <h2><slot>文章类型</slot></h2>
@@ -19,22 +19,19 @@ export default {
   name: 'hello',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
+
       }
   },
   components:{
 
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
     },
   methods:{
-
+    back:function(){
+//      if()
+      history.go(-1);
+    }
   }
 }
 </script>
@@ -49,6 +46,7 @@ export default {
     width: 100%;
     background: #444444;
     color: #ffffff;
+    z-index: 1;
   }
  .back{
    font-size: 0.6rem;

@@ -12,16 +12,10 @@ export default {
   name: 'lunbo',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
       }
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     }
 }
 </script>

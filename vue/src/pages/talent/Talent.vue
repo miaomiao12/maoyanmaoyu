@@ -1,32 +1,24 @@
 <template>
   <div class="article">
-    <article-header>喵喵文</article-header>
+    <article-header>达人秀</article-header>
     <div class="zhanwei"></div>
-    <hot-new>
-      <div slot="new"><router-link to="/trend/article/new">最新</router-link></div>
-      <div slot="hot"><router-link to="/trend/article/hot">最热24小时</router-link></div>
-    </hot-new>
-    <router-view></router-view>
+
   </div>
 </template>
 
 <script>
-  import ArticleHeader from './ArticleHeader'
-  import HotNew from './HotNew'
+  import ArticleHeader from '../trend/ArticleHeader'
   import Axios from "axios"
 export default {
   name: 'hello',
     data () {
       return {
-
       }
   },
   components:{
     ArticleHeader,
-      HotNew
   },
   mounted:function() {
-
     }
 }
 </script>
