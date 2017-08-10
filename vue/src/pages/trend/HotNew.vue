@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import "../../assets/javascript/jquery-1.12.4.js";
+  import "../../assets/js/jquery-1.12.4.min.js";
   import Axios from "axios"
 export default {
   name: 'hot-new',

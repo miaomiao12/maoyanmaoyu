@@ -10,8 +10,8 @@
 </template>
 
 <script>
-  import CommonFooter from '../common/CommonFooter'
-  import CommonHeader from '../common/CommonHeader'
+  import CommonFooter from '../../components/CommonFooter'
+  import CommonHeader from '../../components/CommonHeader'
   import IndexTuiSong from '../index/IndexTuiSong'
   import IndexZhuanTi from '../index/IndexZhuanTi'
   import IndexHotArticle from '../index/IndexHotArticle'

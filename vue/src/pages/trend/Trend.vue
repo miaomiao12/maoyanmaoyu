@@ -36,8 +36,8 @@
 </template>
 
 <script>
-  import CommonFooter from '../common/CommonFooter'
-  import CommonHeader from '../common/CommonHeader'
+  import CommonFooter from '../../components/CommonFooter'
+  import CommonHeader from '../../components/CommonHeader'
   import IndexHotArticle from '../index/IndexHotArticle'
   import HotNew from './HotNew'
   import TrendList from './TrendList'
