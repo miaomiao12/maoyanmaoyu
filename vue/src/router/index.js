@@ -94,6 +94,10 @@ export default new Router({
     {
       path:'/detail-article:id',
       component:DetailArticle
+    },
+    {
+      path: '/my-page',
+      component: MyPage
     }
   ],
   mode: 'history'

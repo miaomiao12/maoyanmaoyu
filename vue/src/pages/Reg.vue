@@ -1,6 +1,6 @@
 <template>
   <div  id="regForm">
-    <img src="../assets/logo.png">
+    <img src="../assets/mao.jpg">
     <input class="input" type="text" name="username" v-model="username" placeholder="  账号" @blur="validate">
     <hr>
     <!-- validate 验证 -->
