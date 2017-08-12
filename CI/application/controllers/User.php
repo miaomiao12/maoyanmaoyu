@@ -37,16 +37,14 @@ class User extends CI_Controller {
         $this->load->model('User_model');
         $result=$this->User_model->login_ing($username,$password);
         if($result){
-            $id=$result->u_id;
-            echo $id;
-        }else {
-            $value = false;
+            echo json_encode($result);
+        }else if(count($result) == 0){
+            $value = 10086;
             echo $value;
         }
-        // echo json_encode($result);
-
     }
 }
+?>
 
 	
 

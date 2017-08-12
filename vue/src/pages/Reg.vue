@@ -11,6 +11,7 @@
     <hr>
     <button id="regButton" @click="reg">注册</button>
   </div>
+
 </template>
 
 
@@ -18,7 +19,6 @@
   import Axios from "axios";
   import { Button } from 'mint-ui';
   import jQuery from "../assets/js/jquery-1.12.4.min.js"
-
   export default {
     data () {
     return {
@@ -57,6 +57,8 @@
         if(flag == true){
           $("#nouseSpan").removeClass("blockspan");
           $("#nouseSpan").addClass("nonespan");
+          $("#regButton").removeAttr('disabled');
+
           //符合规则数组就传数据给中间层 然后查数据库
           Axios.get("http://localhost:3000/hasreg",{
             params:{
@@ -66,15 +68,19 @@
             if (res.data == 1) {
               $("#nonoSpan").removeClass("nonespan");
               $("#nonoSpan").addClass("blockspan");
+              $("#regButton").attr("disabled","true");
+
             }else if (res.data == 0) {
               $("#nonoSpan").removeClass("blockspan");
               $("#nonoSpan").addClass("nonespan");
+              $("#regButton").removeAttr('disabled');
+
             }
           });
-        }else if(flag==false){
+        }else if(flag == false){
           $("#nouseSpan").removeClass("nonespan");
           $("#nouseSpan").addClass("blockspan");
-          $("#regButton").disabled=true;
+          $("#regButton").attr("disabled","true");
         }
       }
   }

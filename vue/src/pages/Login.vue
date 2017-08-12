@@ -13,7 +13,6 @@
 
 <script>
   import Axios from "axios";
-//  import { Button } from 'mint-ui';
   import jQuery from "../assets/js/jquery-1.12.4.min.js"
 
   export default {
@@ -32,13 +31,15 @@
             password:this.password
           }
         }).then((res)=>{
-          // console.log(JSON.parse(res.data));
-          var token = res.data;
-          console.log(token);
-          if(token == false){
+          var token = JSON.parse(res.data);
+          var u_name = token.u_name;
+          var u_id = token.u_id;
+          if(token == 10086){
             $("#tishispan").removeClass("nonespan");
             $("#tishispan").addClass("blockspan");
           }else{
+            sessionStorage.setItem('u_id',u_id);
+            sessionStorage.setItem('u_name',u_name);//session 键名 userid 键值 token
             _this.$router.push("/index");
           }
         })
