@@ -13,22 +13,17 @@
 </template>
 
 <script>
-  import Axios from "axios"
   import "../../assets/js/jquery-1.12.4.min.js";
+  import Axios from "axios"
 export default {
   name: 'hot-new',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
+
       }
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     },
   methods:{
     changehot:function()

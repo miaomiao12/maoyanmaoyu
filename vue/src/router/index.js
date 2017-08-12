@@ -9,8 +9,13 @@ import TrendVideo from '@/pages/trend/TrendVideo'
 import TrendHelp from '@/pages/trend/TrendHelp'
 import NewArticle from '@/pages/trend/NewArticle'
 import HotArticle from '@/pages/trend/HotArticle'
-import Talent from '@/pages/trend/Talent'
-import DetailArticle from '@/pages/trend/DetailArticle'
+import Talent from '@/pages/talent/Talent'
+import DetailArticle from '@/pages/detail/DetailArticle'
+
+
+
+
+
 
 import MyPage from '@/pages/MyPage'
 
@@ -87,8 +92,12 @@ export default new Router({
       component:Talent
     },
     {
-      path:'/detail-article',
+      path:'/detail-article:id',
       component:DetailArticle
+    },
+    {
+      path: '/my-page',
+      component: MyPage
     }
   ],
   mode: 'history'

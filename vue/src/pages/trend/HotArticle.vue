@@ -1,30 +1,28 @@
 <template>
   <div class="index-hot-article">
       <ul class="hot-article">
-        <li>
+        <li v-for="hot in hot_article">
             <div class="article">
               <div class="hot-article-main">
                 <div class="title">
-                  我是热吻热文文章的标题，标题不同拜托拜托摆脱
+                  {{hot.t_title}}
                 </div>
                 <div class="content">
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
+                  {{hot.t_content}}
                 </div>
               </div>
               <div class="article-img">
-                <img src="" alt=""/>
+                <img :src="hot.t_img" alt=""/>
               </div>
             </div>
           <div style="clear: both"></div>
           <div class="author">
-            我是作者
+            主子：{{hot.t_sender}}
+            <span class="dj">
+              点击量：{{hot.t_dj}}
+            </span>
           </div>
         </li>
-        <li>222</li>
-        <li>222</li>
       </ul>
     </div>
   </div>
@@ -36,14 +34,14 @@ export default {
   name: 'lunbo',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
+        hot_article:[],
+        url:'http://localhost:3000/hot_article'
       }
   },
   mounted:function() {
       Axios.get(this.url)
       .then((res)=>{
-          this.users = res.data;
+          this.hot_article = JSON.parse(res.data);
           console.log(res.data);
        });
     }
@@ -61,6 +59,11 @@ export default {
     background: #aaE793;
     /*width: 6rem;*/
     /*height: 6rem;*/
+  }
+  .dj{
+    float: right;
+    margin-right: 0.2rem;
+    font-size: 0.2rem;
   }
   .hot-article li{
     height: 3.1rem;
@@ -82,6 +85,10 @@ export default {
     float: right;
     background: #AAAAAA;
     /*margin: auto;*/
+  }
+  .article-img img{
+    width: 100%;
+    height: 100%;
   }
   .title{
     height: 0.8rem;

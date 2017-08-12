@@ -1,32 +1,26 @@
 <template>
   <div class="index-hot-article">
       <ul class="hot-article">
-        <router-link to="/detail-article">
-        <li>
+        <li v-for="wz in article">
+          <router-link :to="'/detail-article/'+wz.t_id">
             <div class="article">
               <div class="hot-article-main">
                 <div class="title">
-                  我是最新的文章的标题，标题不同拜托拜托摆脱
+                 {{wz.t_title}}
                 </div>
                 <div class="content">
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
-                  微软推哦怕看美女不过方法啊可能是八嘎亚
+                  {{wz.t_content}}
                 </div>
               </div>
               <div class="article-img">
-                <img src="" alt=""/>
+                <img :src="wz.t_img" alt=''/>
               </div>
             </div>
-          <div style="clear: both"></div>
           <div class="author">
-            我是作者
+            {{wz.t_sender}}
           </div>
-        </li>
         </router-link>
-        <li>222</li>
-        <li>222</li>
+        </li>
       </ul>
     </div>
   </div>
@@ -38,17 +32,15 @@ export default {
   name: 'lunbo',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
+        article:''
       }
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
-    }
+    Axios.get('http://localhost:3000/new_article').then((res)=>{
+      this.article=JSON.parse(res.data);
+//      console.log(this.article);
+    });
+  }
 }
 </script>
 
@@ -83,7 +75,10 @@ export default {
     margin: 0.3rem 0.2rem 0.1rem 0.2rem;
     float: right;
     background: #AAAAAA;
-    /*margin: auto;*/
+  }
+  .article-img img{
+    width: 100%;
+    height: 100%;
   }
   .title{
     height: 0.8rem;

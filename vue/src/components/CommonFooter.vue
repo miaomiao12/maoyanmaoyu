@@ -5,7 +5,7 @@
       <li><router-link to="/trend">喵区</router-link></li>
       <li><router-link to="">搞事</router-link></li>
       <li><router-link to="">喵商城</router-link></li>
-      <li><router-link to="">铲屎官</router-link></li>
+      <li><router-link to="/my-page">铲屎官</router-link></li>
     </ul>
   </div>
 </template>
@@ -51,7 +51,8 @@ export default {
     font-size: 0.3rem;
     text-align: center;
   }
-  .commonfooter li a{
-    color: #317EF9;
+  .commonfooter a{
+    color: #FF9999;
+    outline: none;
   }
 </style>

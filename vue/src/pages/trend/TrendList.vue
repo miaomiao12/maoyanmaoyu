@@ -16,16 +16,10 @@ export default {
   name: 'hello',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
       }
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     }
 }
   console.log('kkkk');
@@ -46,6 +40,7 @@ export default {
   .trend-list ul{
     display: flex;
     height: 1rem;
+    margin-top: 0.2rem;
     background: #723377;
   }
 </style>

@@ -18,8 +18,6 @@ export default {
   name: 'hello',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
       }
   },
   components:{
@@ -27,11 +25,7 @@ export default {
       HotNew
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     }
 }
 </script>

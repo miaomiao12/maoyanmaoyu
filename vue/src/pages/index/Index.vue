@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="hello">
     <common-header></common-header>
     <index-tui-song></index-tui-song>
     <index-list></index-list>
@@ -12,33 +12,27 @@
 <script>
   import CommonFooter from '../../components/CommonFooter'
   import CommonHeader from '../../components/CommonHeader'
-  import IndexTuiSong from './IndexTuiSong'
-  import IndexZhuanTi from './IndexZhuanTi'
-  import IndexHotArticle from './IndexHotArticle'
-  import IndexList from './IndexList'
+  import IndexTuiSong from '../index/IndexTuiSong'
+  import IndexZhuanTi from '../index/IndexZhuanTi'
+  import IndexHotArticle from '../index/IndexHotArticle'
+  import IndexList from '../index/IndexList'
   import Axios from "axios"
 export default {
   name: 'hello',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
       }
   },
   components:{
-      CommonFooter,
+    CommonFooter,
       CommonHeader,
       IndexTuiSong,
-      IndexList,
+    IndexList,
       IndexZhuanTi,
-      IndexHotArticle
+    IndexHotArticle
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     }
 }
 </script>

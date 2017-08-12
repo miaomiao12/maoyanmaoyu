@@ -9,18 +9,24 @@
           <li>话题1</li>
         </ul>
       </div>
-      <div class="talent-wall">
-        <h3>| 达人墙
-          <span class="more-talent">
-            <router-link to="/talent">&gt</router-link>
-          </span>
-        </h3>
-        <ul>
-          <li>大人1</li>
-          <li>达人1</li>
-          <li>大人8</li>
-        </ul>
-      </div>
+      <!--<div class="talent-wall">-->
+        <!--<h3>| 达人墙-->
+          <!--<span class="more-talent">-->
+            <!--<router-link to="/talent">&gt</router-link>-->
+          <!--</span>-->
+        <!--</h3>-->
+        <!--<ul class="daren">-->
+          <!--<li class="each-daren">-->
+            <!--<div class="touxiang">-->
+              <!--<img src="/static/article/1.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="daren-name">name</div>-->
+          <!--</li>-->
+          <!--<li>达人1</li>-->
+          <!--<li>大人8</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <talent-wall></talent-wall>
       <trend-list></trend-list>
     <hot-new></hot-new>
     <router-view></router-view>
@@ -35,28 +41,25 @@
   import IndexHotArticle from '../index/IndexHotArticle'
   import HotNew from './HotNew'
   import TrendList from './TrendList'
+  import TalentWall from '../talent/TalentWall'
   import Axios from "axios"
 export default {
   name: 'hello',
     data () {
       return {
-        users:[],
-        url:'http://localhost:3000/user'
+
       }
   },
   components:{
-      CommonFooter,
+    CommonFooter,
       CommonHeader,
       IndexHotArticle,
       HotNew,
-      TrendList
+      TrendList,
+      TalentWall
   },
   mounted:function() {
-      Axios.get(this.url)
-      .then((res)=>{
-          this.users = res.data;
-          console.log(res.data);
-       });
+
     }
 }
 </script>
@@ -64,9 +67,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import "../../assets/css/reset.css";
-  .trend-list{
-    margin-top: 0.1rem;
-  }
 .talent-wall ul{
     display: flex;
     height: 1rem;
@@ -84,7 +84,7 @@ export default {
   }
   .talent-wall{
     /*height: 1rem;*/
-    margin-top: 0.1rem;
+    margin-top: 0.2rem;
   }
   .talent-wall ul li{
     flex: 1;
@@ -93,10 +93,34 @@ export default {
   .more-talent{
     font-weight: bold;
     font-size: 0.3rem;
-    /*float:right;*/
     display: inline-block;
     margin-top: -0.1rem;
     position: absolute;
     right: 0.1rem;
+  }
+  .daren li{
+    font-size: 0.2rem;
+    text-align: center;
+    line-height: 1.3rem;
+  }
+  .each-daren{
+    position: relative;
+  }
+  .touxiang{
+    height: 0.8rem;
+    width: 0.8rem;
+    background: #000;
+    position: absolute;
+    top: 0rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .touxiang img{
+    width: 100%;
+    height: 100%;
+  }
+  .daren-name{
+    position: absolute;
+    top: 0.2rem;
   }
 </style>
