@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8cfc685-67fe-40d3-9e54-67d94f6ca6a8" name="Default" comment="login reg OKOK~">
+    <list default="true" id="f8cfc685-67fe-40d3-9e54-67d94f6ca6a8" name="Default" comment="新miao教程">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/src/pages/index/indexNewmiao.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CI/application/controllers/Comment.php" afterPath="$PROJECT_DIR$/CI/application/controllers/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/Login.vue" afterPath="$PROJECT_DIR$/vue/src/pages/Login.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/index/IndexHotArticle.vue" afterPath="$PROJECT_DIR$/vue/src/pages/index/IndexHotArticle.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/index/IndexList.vue" afterPath="$PROJECT_DIR$/vue/src/pages/index/IndexList.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/router/index.js" afterPath="$PROJECT_DIR$/vue/src/router/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +72,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
+            <state relative-caret-position="619">
               <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -721,7 +717,7 @@
       <workItem from="1502337445398" duration="7000" />
       <workItem from="1502338683421" duration="638000" />
       <workItem from="1502510031835" duration="4335000" />
-      <workItem from="1502611193054" duration="3565000" />
+      <workItem from="1502611193054" duration="3955000" />
     </task>
     <task id="LOCAL-00001" summary="login reg OKOK~">
       <created>1502336767620</created>
@@ -730,17 +726,23 @@
       <option name="project" value="LOCAL" />
       <updated>1502336767620</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="新miao教程">
+      <created>1502615211354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1502615211354</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12483000" />
+    <option name="totallyTimeSpent" value="12873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19102296" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19102296" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -766,7 +768,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login reg OKOK~" />
-    <option name="LAST_COMMIT_MESSAGE" value="login reg OKOK~" />
+    <MESSAGE value="新miao教程" />
+    <option name="LAST_COMMIT_MESSAGE" value="新miao教程" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1073,7 +1076,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
+        <state relative-caret-position="619">
           <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
