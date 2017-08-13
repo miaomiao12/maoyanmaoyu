@@ -46,5 +46,68 @@ router.get('/logining',function(req,res,next){
         }
     });
 });
-
+router.get('/new_article',function(req,res,next) {
+	request.get('http://127.0.0.1/miaomiaomiao/CI/article/newarticle', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			//console.log(body);
+			result = body;
+			console.log(result);
+			res.json(result);
+		}
+	});
+});
+router.get('/hot_article',function(req,res,next) {
+	request.get('http://127.0.0.1/miaomiaomiao/CI/article/hotarticle', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			//console.log(body);
+			result = body;
+			console.log(result);
+			res.json(result);
+		}
+	});
+});
+router.get('/detail_article',function(req,res,next) {
+	var tid= req.query.t_id;
+	console.log(tid);
+	request.get('http://127.0.0.1/miaomiaomiao/CI/article/detailarticle/'+tid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			//console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+router.get('/add_comment',function(req,res,next) {
+	var tid= req.query.t_id;
+	var c_user_id= req.query.user_id;
+	var c_content= req.query.c_content;
+	console.log(c_content);
+	request.get('http://127.0.0.1/miaomiaomiao/CI/comment/add_comment?t_id='+tid+'&c_user_id='+c_user_id+'&c_content='+c_content, function (error, response, body) {
+		if (!error && response.statusCode == 2
+			00) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+router.get('/allcomment',function(req,res,next) {
+	var tid= req.query.t_id;
+	request.get('http://127.0.0.1/miaomiaomiao/CI/comment/allcomment/'+tid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+router.get('/talentwall',function(req,res,next) {
+	request.get('http://127.0.0.1/miaomiaomiao/CI/user/talentwall/', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
 module.exports = router;

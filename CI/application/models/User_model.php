@@ -33,5 +33,13 @@
             $query = $this->db->get_where('users', $arr);
             return $query->row();
         }
+        public function talentwall(){
+            $sql='SELECT t_sender,count(t_sender),u_name,u_id,head_img from trends,users where t_sender=u_id GROUP BY t_sender ORDER BY COUNT(t_sender) DESC limit 3';
+            $query=$this->db->query($sql);
+            // $this->db->select();
+            // $this->db->where('user');
+            // $query=$this->db->limited('');
+            return $query->result();
+        }
 	}
 ?>

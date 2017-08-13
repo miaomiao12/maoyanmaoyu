@@ -43,6 +43,11 @@ class User extends CI_Controller {
             echo $value;
         }
     }
+    public function talentwall(){
+        $this->load->model('User_model');
+        $result = $this->User_model->talentwall();
+        echo json_encode($result);
+    }
 }
 ?>
 
