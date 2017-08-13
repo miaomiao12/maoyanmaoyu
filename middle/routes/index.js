@@ -83,8 +83,7 @@ router.get('/add_comment',function(req,res,next) {
 	var c_content= req.query.c_content;
 	console.log(c_content);
 	request.get('http://127.0.0.1/miaomiaomiao/CI/comment/add_comment?t_id='+tid+'&c_user_id='+c_user_id+'&c_content='+c_content, function (error, response, body) {
-		if (!error && response.statusCode == 2
-			00) {
+		if (!error && response.statusCode == 200) {
 			console.log(body);
 			result = body;
 			res.json(result);
