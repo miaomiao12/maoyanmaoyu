@@ -11,7 +11,7 @@ import NewArticle from '@/pages/trend/NewArticle'
 import HotArticle from '@/pages/trend/HotArticle'
 import Talent from '@/pages/talent/Talent'
 import DetailArticle from '@/pages/detail/DetailArticle'
-import MyPage from '@/pages/mypage/MyPag'
+import MyPage from '@/pages/mypage/MyPage'
 
 Vue.use(Router)
 
