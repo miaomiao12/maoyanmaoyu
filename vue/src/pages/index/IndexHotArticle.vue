@@ -38,7 +38,6 @@ export default {
   mounted:function() {
       Axios.get('http://localhost:3000/new_article').then((res)=>{
       this.article=JSON.parse(res.data);
-//      console.log(this.article);
     });
     }
 }

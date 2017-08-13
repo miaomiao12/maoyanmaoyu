@@ -1,7 +1,7 @@
 <template>
   <div class="index-list">
     <div class="list">
-      <span>新喵教程</span>
+      <span><router-link to="/newmiao">新喵教程</router-link></span>
       <span>明星喵</span>
       <span>喵喵来玩</span>
       <span>铲屎官聊</span>

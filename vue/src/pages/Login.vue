@@ -40,6 +40,7 @@
           }else{
             sessionStorage.setItem('u_id',u_id);
             sessionStorage.setItem('u_name',u_name);//session 键名 userid 键值 token
+            // console.log(sessionStorage.getItem('u_id'));
             _this.$router.push("/index");
           }
         })

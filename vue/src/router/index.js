@@ -12,6 +12,7 @@ import HotArticle from '@/pages/trend/HotArticle'
 import Talent from '@/pages/talent/Talent'
 import DetailArticle from '@/pages/detail/DetailArticle'
 import MyPage from '@/pages/mypage/MyPage'
+import IndexNewmiao from '@/pages/index/indexNewmiao'
 
 Vue.use(Router)
 
@@ -92,7 +93,12 @@ export default new Router({
     {
       path: '/my-page',
       component: MyPage
+    },
+    {
+      path: '/newmiao',
+      component: IndexNewmiao
     }
+
   ],
   mode: 'history'
 })

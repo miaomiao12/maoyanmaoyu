@@ -23,7 +23,6 @@ class Comment extends CI_Controller {
 			echo '0';
 		}
 	}
-	
 	public function allcomment(){
 		$tid=$this->uri->segment(3);
 		$arr=array(
