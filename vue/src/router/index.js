@@ -97,6 +97,10 @@ export default new Router({
     {
       path: '/newmiao',
       component: IndexNewmiao
+    },
+    {
+      path:'/talent-info/:uid',
+      component:TalentInfo
     }
 
   ],

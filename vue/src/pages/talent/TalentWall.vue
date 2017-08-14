@@ -9,12 +9,12 @@
       <div class="daren">
       <ul >
         <li class="each-daren" v-for="talent in talentwall">
-          <div class="touxiang">
-            <div>
-              <img :src="talent.head_img" alt=""/>
-            </div>
-          </div>
-          <div class="daren-name">{{talent.u_name}}</div>
+          <router-link :to="'/talent-info/'+talent.u_id">
+              <div class="touxiang">
+                  <img :src="talent.head_img" alt=""/>
+              </div>
+              <div class="daren-name">{{talent.u_name}}</div>
+            </router-link>
         </li>
       </ul>
       </div>
