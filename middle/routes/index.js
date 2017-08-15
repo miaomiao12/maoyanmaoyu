@@ -109,4 +109,20 @@ router.get('/talentwall',function(req,res,next) {
 		}
 	});
 });
+router.get('/shownewmiao',function(req,res,next) {
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/article/show_Newmiao/', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			res.json(body);
+		}
+	});
+});
+
+router.get('/addcatalogname',function(req,res,next) {
+	var cname= req.query.cname;
+	request.post({url:'http://127.0.0.1/maoyanmaoyu/CI/article/add_catalog',form:{cname:cname}},function(error,response,body){
+		if (!error && response.statusCode == 200) {
+        }
+	});
+});
 module.exports = router;

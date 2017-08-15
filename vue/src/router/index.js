@@ -13,6 +13,9 @@ import Talent from '@/pages/talent/Talent'
 import DetailArticle from '@/pages/detail/DetailArticle'
 import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
+import TalentInfo from '@/pages/talent/TalentInfo'
+import AddCatalog from  '@/pages/index/AddCatalog'
+
 
 Vue.use(Router)
 
@@ -101,7 +104,12 @@ export default new Router({
     {
       path:'/talent-info/:uid',
       component:TalentInfo
+    },
+    {
+      path: '/addcatalog',
+      component: AddCatalog
     }
+
 
   ],
   mode: 'history'

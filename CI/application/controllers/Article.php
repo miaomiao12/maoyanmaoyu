@@ -21,7 +21,22 @@ class Article extends CI_Controller {
 		$result = $this->Article_model->detail_article($arr);
 		echo json_encode($result);
 	}
+
+
+
+	public function show_Newmiao(){
+		$this->load->model('Article_model');
+		$result = $this->Article_model->select_Newmiao();
+
+	}	
+	public function add_catalog(){
+        $cname=$this->input->post("cname");
+        $this->load->model('Article_model');
+		$result = $this->Article_model->add_catalog($cname);
+	}
+	
 }
+
 
 	
 
