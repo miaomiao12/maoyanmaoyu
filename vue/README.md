@@ -1,4 +1,4 @@
-# vue_node_ci
+# vue_node_cli
 
 > A Vue.js project
 
