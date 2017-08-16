@@ -14,7 +14,6 @@ import TalentInfo from '@/pages/talent/TalentInfo'
 import DetailArticle from '@/pages/detail/DetailArticle'
 import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
-import TalentInfo from '@/pages/talent/TalentInfo'
 import AddCatalog from  '@/pages/index/AddCatalog'
 
 
