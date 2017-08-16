@@ -3,9 +3,9 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import Mint from 'mint-ui'
+// import Mint from 'mint-ui'
 
-Vue.use(Mint)
+// Vue.use(Mint)
 require('./assets/js/rem.js')
 Vue.config.productionTip = false
 

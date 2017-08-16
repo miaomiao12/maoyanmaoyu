@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cfc685-67fe-40d3-9e54-67d94f6ca6a8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CI/application/controllers/Article.php" afterPath="$PROJECT_DIR$/CI/application/controllers/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CI/application/models/Article_model.php" afterPath="$PROJECT_DIR$/CI/application/models/Article_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue" afterPath="$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/main.js" afterPath="$PROJECT_DIR$/vue/src/main.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -731,7 +729,7 @@
       <workItem from="1502510031835" duration="4335000" />
       <workItem from="1502611193054" duration="4434000" />
       <workItem from="1502778177517" duration="2286000" />
-      <workItem from="1502853379355" duration="105000" />
+      <workItem from="1502853379355" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="login reg OKOK~">
       <created>1502336767620</created>
@@ -761,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502779854792</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成了new喵页面的简单样式 和 文章显示。">
+      <created>1502853518479</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1502853518479</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15743000" />
+    <option name="totallyTimeSpent" value="15902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -798,7 +803,8 @@
     <MESSAGE value="login reg OKOK~" />
     <MESSAGE value="新miao教程" />
     <MESSAGE value="一个独立的、用来添加分类的页面AddCatalog.vue&#10; 以及中间层和后台相关代码的变动" />
-    <option name="LAST_COMMIT_MESSAGE" value="一个独立的、用来添加分类的页面AddCatalog.vue&#10; 以及中间层和后台相关代码的变动" />
+    <MESSAGE value="完成了new喵页面的简单样式 和 文章显示。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了new喵页面的简单样式 和 文章显示。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
