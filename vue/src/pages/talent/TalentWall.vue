@@ -50,8 +50,9 @@ export default {
     height: 1rem;
     background: #723377;
   }
-  .talent-wall h2{
-    font-size: 0.25rem;
+  .talent-wall h3{
+    font-size: 0.3rem;
+    text-align: left;
     margin-left: 0.1rem;
   }
   .talent-wall{
@@ -65,7 +66,7 @@ export default {
   }
   .more-talent{
     font-weight: bold;
-    font-size: 0.3rem;
+    font-size: 0.4rem;
     display: inline-block;
     margin-top: -0.1rem;
     position: absolute;

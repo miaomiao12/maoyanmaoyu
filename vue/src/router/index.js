@@ -10,10 +10,10 @@ import TrendHelp from '@/pages/trend/TrendHelp'
 import NewArticle from '@/pages/trend/NewArticle'
 import HotArticle from '@/pages/trend/HotArticle'
 import Talent from '@/pages/talent/Talent'
+import TalentInfo from '@/pages/talent/TalentInfo'
 import DetailArticle from '@/pages/detail/DetailArticle'
 import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
-import TalentInfo from '@/pages/talent/TalentInfo'
 import AddCatalog from  '@/pages/index/AddCatalog'
 
 
