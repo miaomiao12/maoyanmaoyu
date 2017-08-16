@@ -14,7 +14,7 @@
     }
 </script>
 
-<style>
+<style scoped>
   @import "../../assets/css/reset.css";
   .myHeader{
     width: 100%;
