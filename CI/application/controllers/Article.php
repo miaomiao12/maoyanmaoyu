@@ -27,6 +27,8 @@ class Article extends CI_Controller {
 	public function show_Newmiao(){
 		$this->load->model('Article_model');
 		$result = $this->Article_model->select_Newmiao();
+		echo json_encode($result);
+
 
 	}	
 	public function add_catalog(){

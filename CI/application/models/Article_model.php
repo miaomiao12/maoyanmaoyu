@@ -20,13 +20,17 @@
 			return $query->result();
 		}
 		public function add_catalog($cname){
-			 $arr = array(
+			$arr = array(
 			 				'catalog_id' 	=> null,
                             'catalog_name' 	=> $cname
                             );
             $sql = $this->db->insert_string('t_catalog', $arr);
             $query=$this->db->query($sql);
             return $query;
+		}
+		public function select_Newmiao(){
+			$query = $this->db->get_where('trends', array('catalog_id' => 9));
+            return $query->result();
 		}
 	}
 ?>
