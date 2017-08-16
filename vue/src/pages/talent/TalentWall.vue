@@ -50,8 +50,9 @@ export default {
     height: 1rem;
     background: #723377;
   }
-  .talent-wall h2{
-    font-size: 0.25rem;
+  .talent-wall h3{
+    /*font-size: 0rem;*/
+    text-align: left;
     margin-left: 0.1rem;
   }
   .talent-wall{
