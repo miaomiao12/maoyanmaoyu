@@ -1,13 +1,29 @@
 <template>
   <div class="index-lun-bo">
     <div class="lun-bo">
-      后台推送
+
+      <mt-swipe  :auto="4000">
+          <mt-swipe-item>
+              <img src="../../assets/img/miaomiao2.jpg">
+          </mt-swipe-item>
+
+          <mt-swipe-item>
+              <img src="../../assets/img/miaomiao1.jpg">
+          </mt-swipe-item>
+
+          <mt-swipe-item>
+              <img src="../../assets/img/miaomiao3.jpg">
+          </mt-swipe-item>
+      </mt-swipe>
+
     </div>
   </div>
 </template>
 
 <script>
   import Axios from "axios"
+  import { Swipe, SwipeItem } from 'mint-ui';
+
 export default {
   name: 'lunbo',
     data () {
@@ -30,6 +46,6 @@ export default {
   .lun-bo{
     margin-top: 0.1rem;
     background: #FFE793;
-    height: 3rem;
+    height: 4rem;
   }
 </style>

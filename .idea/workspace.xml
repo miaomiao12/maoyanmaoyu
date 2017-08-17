@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8cfc685-67fe-40d3-9e54-67d94f6ca6a8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vue/src/pages/AddCatalog.vue" afterPath="" />
+    <list default="true" id="f8cfc685-67fe-40d3-9e54-67d94f6ca6a8" name="Default" comment="调整了一下NewMiaomiao.vue">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/src/assets/img/miaomiao1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/src/assets/img/miaomiao2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/src/assets/img/miaomiao3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/main.js" afterPath="$PROJECT_DIR$/vue/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/index/IndexTuiSong.vue" afterPath="$PROJECT_DIR$/vue/src/pages/index/IndexTuiSong.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue" afterPath="$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/vue/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -84,8 +88,8 @@
       <file leaf-file-name="AddCatalog.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/src/pages/index/AddCatalog.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+            <state relative-caret-position="330">
+              <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
               <folding>
                 <element signature="e#269#294#0" expanded="true" />
               </folding>
@@ -96,8 +100,8 @@
       <file leaf-file-name="NewMiaomiao.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+            <state relative-caret-position="240">
+              <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -263,7 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -540,6 +544,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maoyanmaoyu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maoyanmaoyu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -654,7 +684,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -760,7 +790,8 @@
       <workItem from="1502611193054" duration="4434000" />
       <workItem from="1502778177517" duration="2286000" />
       <workItem from="1502853379355" duration="1620000" />
-      <workItem from="1502939350823" duration="298000" />
+      <workItem from="1502939350823" duration="585000" />
+      <workItem from="1502940752140" duration="90000" />
     </task>
     <task id="LOCAL-00001" summary="login reg OKOK~">
       <created>1502336767620</created>
@@ -804,11 +835,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502853684669</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="调整了一下NewMiaomiao.vue">
+      <created>1502939679370</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1502939679370</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17556000" />
+    <option name="totallyTimeSpent" value="17933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -843,7 +881,8 @@
     <MESSAGE value="一个独立的、用来添加分类的页面AddCatalog.vue&#10; 以及中间层和后台相关代码的变动" />
     <MESSAGE value="完成了new喵页面的简单样式 和 文章显示。" />
     <MESSAGE value="main.js 去掉了 mint的引入。" />
-    <option name="LAST_COMMIT_MESSAGE" value="main.js 去掉了 mint的引入。" />
+    <MESSAGE value="调整了一下NewMiaomiao.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整了一下NewMiaomiao.vue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1229,7 +1268,7 @@
     <entry file="file://$PROJECT_DIR$/vue/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -1239,8 +1278,8 @@
     <entry file="file://$PROJECT_DIR$/vue/src/pages/AddCatalog.vue" />
     <entry file="file://$PROJECT_DIR$/vue/src/pages/index/AddCatalog.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        <state relative-caret-position="330">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
           <folding>
             <element signature="e#269#294#0" expanded="true" />
           </folding>
@@ -1249,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/src/pages/index/NewMiaomiao.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+        <state relative-caret-position="240">
+          <caret line="8" column="75" lean-forward="true" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
           <folding />
         </state>
       </provider>

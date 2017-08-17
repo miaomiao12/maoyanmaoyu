@@ -1,7 +1,6 @@
 <template>
   <div  class="newMiao">
      <ul class="hot-article">
-
         <li v-for="wz in article">
           <router-link :to="'/detail-article/'+wz.t_id">
 
@@ -12,8 +11,8 @@
           </router-link>
         </li>
       </ul>
-    </div>
   </div>
+
 </template>
 
 <script>
