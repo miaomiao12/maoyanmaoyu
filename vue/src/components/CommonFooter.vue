@@ -3,7 +3,7 @@
     <ul class="commonfooter">
       <li><router-link to="/index">首页</router-link></li>
       <li><router-link to="/trend">喵区</router-link></li>
-      <li><router-link to="">搞事</router-link></li>
+      <li><router-link to="/action">搞事</router-link></li>
       <li><router-link to="">喵商城</router-link></li>
       <li><router-link to="/my-page">铲屎官</router-link></li>
     </ul>
