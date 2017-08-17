@@ -51,6 +51,21 @@
   }
   .my-body .my-baby{
     width: 100%;
+  }
+  .my-body .my-baby li{
     height: 1rem;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #CCC;
+    background-color: #f6f6f6;
+    border-bottom: 0.05rem solid #ccc;
+  }
+  .my-body .cat-baby li{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #CCC;
+    background-color: #f6f6f6;
+    border-bottom: 0.05rem solid #ccc;
   }
 </style>
