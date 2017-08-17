@@ -1,10 +1,15 @@
 <template>
   <div  class="newMiao">
      <ul class="hot-article">
+
         <li v-for="wz in article">
+          <router-link :to="'/detail-article/'+wz.t_id">
+
           <div class="title"><div class="zuo"> {{wz.t_title}}</div></div>
-          <div class="content"><div class="zuo test" > {{wz.t_content}}</div></div>
+          <div class="content"><div class="test" > {{wz.t_content}}</div></div>
           <div class="author"><div class="">发布者：{{wz.t_sender}}</div></div>
+
+          </router-link>
         </li>
       </ul>
     </div>
@@ -66,14 +71,13 @@ export default {
     font-size: 0.25rem;
     color: #ffffff;
   }
-  .zuo{
-    float: left;
-  }
+  /*.zuo{*/
+    /*float: left;*/
+  /*}*/
   .test{
     text-overflow:ellipsis;
     overflow:hidden;
     white-space:nowrap;
-    width:360px;
   }
 
 </style>
