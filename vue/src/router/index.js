@@ -90,7 +90,7 @@ export default new Router({
       component:Talent
     },
     {
-      path:'/detail-article:id',
+      path:'/detail-article/:id',
       component:DetailArticle
     },
     {
