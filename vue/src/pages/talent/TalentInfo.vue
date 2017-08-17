@@ -2,15 +2,21 @@
   <div class="article">
     <article-header>达人信息</article-header>
     <div class="zhanwei"></div>
-    <div class="info">
+    <div class="info" v-for="info in talentinfo">
+    <!--<div class="info">-->
         <div class="touxiang">
-          <img src="#" alt=""/>
+          <img :src="info.head_img" alt=""/>
+          <!--<img src="#" alt=""/>-->
         </div>
         <div class="person-info">
-
+          <!--{{info.u_name}}-->
+          <ul>
+            <li>姓名：{{info.u_name}}</li>
+            <li>昵称：{{info.u_nickname}}</li>
+            <li>性别：{{info.sex}}</li>
+          </ul>
         </div>
     </div>
-    <div style="clear:both"></div>
     <div class="his-blog">
       <ul class="hot-article">
         <li>
@@ -44,14 +50,23 @@ export default {
   name: 'hello',
     data () {
       return {
-
+      talentinfo:""
       }
   },
   components:{
     ArticleHeader,
   },
   mounted:function() {
-    var uid=this.$route.params.id;
+    var uid=this.$route.params.uid;
+    console.log(uid);
+    Axios.get('http://localhost:3000/talent-info',{
+      params:{
+        u_id:uid
+      }
+    }).then((res)=>{
+      this.talentinfo=JSON.parse(res.data);
+      console.log(this.talentinfo);
+    });
     }
 }
 </script>

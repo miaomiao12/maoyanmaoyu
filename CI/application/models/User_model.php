@@ -41,5 +41,10 @@
             // $query=$this->db->limited('');
             return $query->result();
         }
+		public function talent_info($arr){
+			$this->db->select('*');
+			$query=$this->db->get_where('users',$arr);
+			return $query->result();
+		}
 	}
 ?>

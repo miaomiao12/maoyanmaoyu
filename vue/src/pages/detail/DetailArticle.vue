@@ -65,8 +65,8 @@ export default {
     ArticleHeader
   },
   mounted:function() {
-    console.log("miamaiaiaa");
     var id=this.$route.params.id;
+    console.log(id);
     Axios.get('http://localhost:3000/detail_article',{
       params:{
         t_id:id

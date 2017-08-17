@@ -48,6 +48,17 @@ class User extends CI_Controller {
         $result = $this->User_model->talentwall();
         echo json_encode($result);
     }
+	
+	public function select_talent_info(){
+		$uid=$this->uri->segment(3);
+		// echo $uid;
+		$arr=array(
+			'u_id'=>$uid
+		);
+		$this->load->model('User_model');
+        $result = $this->User_model->talent_info($arr);
+		echo json_encode($result);
+	}
 }
 ?>
 
