@@ -14,7 +14,7 @@
   import Axios from "axios"
 export default {
   name: 'hello',
-    data () {
+  data () {
       return {
         users:[],
         url:'http://localhost:3000/user'

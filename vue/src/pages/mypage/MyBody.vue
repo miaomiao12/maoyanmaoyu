@@ -1,8 +1,10 @@
 <template>
   <div class="my-body">
-    <div class="login-reg">
-      <img src="#" alt="miao~ " />
-      <span class="btn-login-reg">登录/注册</span>
+    <div class="person-info" >
+      <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
+     <span class="u-id">账号：87798</span>
+      <span class="u-name">昵称：</span>
+      <span class="person-home">个人主页 &gt;</span>
     </div>
     <div class="my-baby">
       <ul>
@@ -19,6 +21,7 @@
         <li class="cat-circle">猫圈</li>
         <li class="collect">收藏</li>
         <li class="cut-account">切换账号</li>
+        <li></li>
       </ul>
     </div>
   </div>
@@ -26,12 +29,21 @@
 
 <script>
     export default{
+      name: 'body',
+      components: {
 
+      },
+      mounted:function() {
+//        Axios.get('http://localhost:3000')
+//          .then((res) => {
+//
+//        })
+      }
     }
 </script>
 
 <style scoped>
-  .login-reg{
+  .person-info{
     /*flex: 1;*/
     width: 100%;
     height: 1.5rem;
@@ -39,15 +51,27 @@
     margin-top: 1rem;
     /*position: relative;*/
     /*top: 1rem;*/
-    font-size: 0.6rem;
+    font-size: 0.3rem;
     line-height: 1.5rem;
-    background: #FF9999;
-    border-bottom: 0.2rem solid #cccccc;
+    background: #f6f6f6;
+    border: 0.2rem solid #f6f6f6;
+    position: relative;
+    /*border-bottom: 0.2rem solid #cccccc;*/
   }
-  .login-reg .btn-login-reg{
-    border: 0.05rem #cccccc;
-    background: #ce8483;
-    color: #f6f6f6;
+  .person-info img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.2rem;
+  }
+  .person-info .person-home{
+    border: 0.05rem;
+    /*background: #ce8483;*/
+    color: #ccc;
+    position: absolute;
+    right: 0.5rem;
+  }
+  .person-info span{
+    display: inline-block;
   }
   .my-body .my-baby{
     width: 100%;
@@ -59,6 +83,7 @@
     color: #CCC;
     background-color: #f6f6f6;
     border-bottom: 0.05rem solid #ccc;
+    padding-left: 0.2rem;
   }
   .my-body .cat-baby li{
     height: 1rem;
@@ -67,5 +92,6 @@
     color: #CCC;
     background-color: #f6f6f6;
     border-bottom: 0.05rem solid #ccc;
+    padding-left: 0.2rem;
   }
 </style>
