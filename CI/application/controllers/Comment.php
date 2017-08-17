@@ -2,10 +2,13 @@
 class Comment extends CI_Controller {
 
 	public function add_comment(){
-		header('Content-type: text/html;charset=GBK');
-		$id=$this->input->get('t_id');
-		$uid=$this->input->get('c_user_id');
-		$content=$this->input->get('c_content');
+		// header('Content-type: text/html;charset=GBK');
+		$id=$this->uri->segment(3);
+		$uid=$this->uri->segment(4);
+		$content=$this->uri->segment(5);
+		// $id=$this->input->get('t_id');
+		// $uid=$this->input->get('c_user_id');
+		// $content=$this->input->get('c_content');
 		$content=iconv('GBK','UTF-8', $content);
 			// echo($content);
 		$this->load->model('Comment_model');

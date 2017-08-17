@@ -41,7 +41,7 @@ export default {
       HotNew,
       TrendList,
       TalentWall
-  }, 
+  },
   mounted:function() {
 
     }

@@ -24,6 +24,7 @@ export default {
       }
   },
   mounted:function() {
+    console.log("miaomiaomioa");
       Axios.get('http://localhost:3000/shownewmiao').then((res)=>{
         this.article=JSON.parse(res.data);
     });

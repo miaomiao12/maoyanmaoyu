@@ -3,6 +3,7 @@
       <ul class="hot-article">
         <li v-for="wz in article">
           <router-link :to="'/detail-article/'+wz.t_id">
+          <!--<router-link to="/detail-article">-->
             <div class="article">
               <div class="hot-article-main">
                 <div class="title">

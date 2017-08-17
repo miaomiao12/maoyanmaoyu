@@ -1,5 +1,6 @@
 <template>
   <div class="detail-article">
+    <div>slkjsdlka</div>
     <div v-for="details in detail">
     <article-header>喵文详情</article-header>
     <div class="zhanwei" ></div>
@@ -20,7 +21,7 @@
         <div class="pic">
         <img :src="details.t_img" alt=""/>
       </div>
-        <div style="clear: both"></div>
+
       </div>
       <div class="author">
         <h2>
@@ -87,6 +88,8 @@ export default {
     {
       var tid=this.$route.params.id;
       var $content=$("#com-val").val();
+      console.log('mmm');
+      console.log($content);
       if(!$content){
         alert("请输入内容~")
       }else{
