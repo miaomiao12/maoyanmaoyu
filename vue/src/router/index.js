@@ -12,6 +12,7 @@ import HotArticle from '@/pages/trend/HotArticle'
 import Talent from '@/pages/talent/Talent'
 import TalentInfo from '@/pages/talent/TalentInfo'
 import DetailArticle from '@/pages/detail/DetailArticle'
+import Message from '@/pages/detail/Message'
 import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
 import AddCatalog from  '@/pages/index/AddCatalog'
@@ -112,6 +113,10 @@ export default new Router({
     {
       path: '/action',
       component: Action
+    },
+    {
+      path:'/message',
+      component:Message
     }
 
 

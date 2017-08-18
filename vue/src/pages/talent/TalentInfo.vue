@@ -20,8 +20,9 @@
     </div>
     <div class="his-blog">
       <ul class="hot-article">
+        <h2>全部动态</h2>
         <li v-for="his in histrend">
-          <router-link to="">
+          <router-link :to="'/detail-article/'+his.t_id">
             <div class="article">
               <div class="hot-article-main">
                 <div class="title">

@@ -29,7 +29,7 @@ class Comment extends CI_Controller {
 	public function allcomment(){
 		$tid=$this->uri->segment(3);
 		$arr=array(
-			'c_trend_id'=>$tid
+			'comments.c_trend_id'=>$tid
 		);
 		$this->load->model('Comment_model');
 		$result = $this->Comment_model->all_comment($arr);

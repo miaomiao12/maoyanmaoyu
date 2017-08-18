@@ -4,7 +4,9 @@
       <span class="search">搜索
         <input type="text" placeholder="搜索文章或标题"/>
       </span>
-      <span class="message">MES</span>
+      <router-link to="/message">
+        <span class="message">MES</span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -77,6 +79,9 @@ export default {
     height: 1rem;
     margin: 0 auto;
     /*width: 1rem;*/
+  }
+  .commonheader a{
+    color: #000;
   }
 
 </style>

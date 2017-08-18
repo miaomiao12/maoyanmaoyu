@@ -4,6 +4,7 @@
     <div class="zhanwei"></div>
     <ul class="talent-person">
       <li v-for="once in alltalent">
+        <router-link :to="'/talent-info/'+once.u_id">
         <div class="head">
           <img :src="once.head_img" alt=""/>
         </div>
@@ -12,6 +13,7 @@
           <span class="sex">性别：{{once.sex}}</span>
           <div class="count">动态数量：还没统计</div>
         </div>
+        </router-link>
       </li>
     </ul>
   </div>

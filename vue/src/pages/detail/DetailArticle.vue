@@ -20,9 +20,9 @@
         </div>
         <div class="pic">
         <img :src="details.t_img" alt=""/>
+         </div>
       </div>
-
-      </div>
+      <div style="clear: both"></div>
       <div class="author">
         <h2>
         作者：{{details.t_sender}}
@@ -38,7 +38,7 @@
           <li v-for="pl in comment">
             <div class="each-comment">
               <p></p>
-              <span>{{pl.c_user_id}}:~{{pl.c_content}}</span>
+              <span>{{pl.u_nickname}}:~{{pl.c_content}}</span>
             </div>
 
           </li>
@@ -91,13 +91,19 @@ export default {
       var $content=$("#com-val").val();
       console.log('mmm');
       console.log($content);
-      if(!$content){
-        alert("请输入内容~")
+      if(!sessionStorage.getItem('u_id')){
+        alert("喵喵！还没登陆");
+        this.$router.push("/login");
+      }else if(!$content){
+        console.log("我已经登陆"+sessionStorage.getItem('u_id'));
+        alert("请输入内容~");
       }else{
+        var $uid=sessionStorage.getItem('u_id');
         Axios.get('http://localhost:3000/add_comment',{
           params:{
             t_id:tid,
-            user_id:3,
+            user_id:$uid,
+//            user_id:sessionStorage.getItem('u_id'),
             c_content:$content
           }
         }).then((res)=>{
@@ -153,11 +159,12 @@ export default {
     height: 1rem;
     width: 100%;
     font-size: 0.25rem;
+    margin-left: 0.3rem;
     position: relative;
   }
   .author .dj{
     position: absolute;
-    right: 0.1rem;
+    right: 0.7rem;
     top: 0.05rem;
   }
   .comment{

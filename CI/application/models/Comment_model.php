@@ -8,7 +8,10 @@
 		public function all_comment($arr){
 			$this->db->select('*');
 			$this->db->order_by('c_id','DESC');
-			$query=$this->db->get_where('comments', $arr);
+			$this->db->from('comments');
+			$this->db->where($arr);
+			$this->db->join('users', 'comments.c_user_id = users.u_id');
+			$query=$this->db->get();
 			return $query->result();
 		}
 	}
