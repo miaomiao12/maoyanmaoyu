@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <article-header>达人秀</article-header>
+    <article-header>达人秀喵~</article-header>
     <div class="zhanwei"></div>
     <ul class="talent-person">
       <li v-for="once in alltalent">
