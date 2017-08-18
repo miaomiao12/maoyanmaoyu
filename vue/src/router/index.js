@@ -15,7 +15,7 @@ import DetailArticle from '@/pages/detail/DetailArticle'
 import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
 import AddCatalog from  '@/pages/index/AddCatalog'
-
+import Action from '@/pages/action/Action'
 
 Vue.use(Router)
 
@@ -108,6 +108,10 @@ export default new Router({
     {
       path: '/addcatalog',
       component: AddCatalog
+    },
+    {
+      path: '/action',
+      component: Action
     }
 
 
