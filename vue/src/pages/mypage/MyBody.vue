@@ -2,9 +2,9 @@
   <div class="my-body">
     <div class="person-info" >
       <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
-     <span class="u-id">账号：87798</span>
       <span class="u-name">昵称：</span>
-      <span class="person-home">个人主页 &gt;</span>
+      <span class="u-id">账号：87798</span>
+      <p class="person-home">个人主页 &gt;</p>
     </div>
     <div class="my-baby">
       <ul>
@@ -43,8 +43,11 @@
 </script>
 
 <style scoped>
+  .my-body{
+    z-index: 99;
+  }
   .person-info{
-    /*flex: 1;*/
+    flex: 1;
     width: 100%;
     height: 1.5rem;
     /*display: block;*/

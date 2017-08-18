@@ -22,6 +22,7 @@
     position: fixed;
     top: 0;
     background: #F9CC9D;
+    z-index: 100;
   }
   .myHeader ul{
     display: flex;
