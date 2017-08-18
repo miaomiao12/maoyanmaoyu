@@ -46,5 +46,11 @@
 			$query=$this->db->get_where('users',$arr);
 			return $query->result();
 		}
+		public function all_user(){
+			// $this->db->select('*');
+			$query=$this->db->get('users');
+			return $query->result();
+		}
+		
 	}
 ?>

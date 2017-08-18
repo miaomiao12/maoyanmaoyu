@@ -19,6 +19,9 @@
 			$query=$this->db->get_where('trends',$arr);
 			return $query->result();
 		}
+		public function each_info($arr){
+			
+		}
 		public function add_catalog($cname){
 			$arr = array(
 			 				'catalog_id' 	=> null,

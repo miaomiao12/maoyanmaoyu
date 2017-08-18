@@ -131,6 +131,26 @@ router.get('/talent-info',function(req,res,next) {
 	console.log(uid);
 	request.get('http://127.0.0.1/maoyanmaoyu/CI/user/select_talent_info/'+uid, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+router.get('/his-trend',function(req,res,next) {
+	var uid= req.query.u_id;
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/article/select_his_trend/'+uid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+router.get('/all_talent',function(req,res,next) {
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/user/select_all/', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
 			console.log(body);
 			result = body;
 			res.json(result);

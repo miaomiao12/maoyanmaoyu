@@ -59,6 +59,11 @@ class User extends CI_Controller {
         $result = $this->User_model->talent_info($arr);
 		echo json_encode($result);
 	}
+	public function select_all(){
+		$this->load->model('User_model');
+		$result = $this->User_model->all_user();
+		echo json_encode($result);
+	}
 }
 ?>
 

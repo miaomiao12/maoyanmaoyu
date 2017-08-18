@@ -36,6 +36,15 @@ class Article extends CI_Controller {
         $this->load->model('Article_model');
 		$result = $this->Article_model->add_catalog($cname);
 	}
+	public function select_his_trend(){
+		$id=$this->uri->segment(3);
+		$this->load->model('Article_model');
+		$arr=array(
+			't_sender'=>$id
+		);
+		$result = $this->Article_model->detail_article($arr);
+		echo json_encode($result);
+	}
 	
 }
 

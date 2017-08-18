@@ -10,31 +10,35 @@
         </div>
         <div class="person-info">
           <!--{{info.u_name}}-->
-          <ul>
+          <ul class="geren-info">
             <li>姓名：{{info.u_name}}</li>
             <li>昵称：{{info.u_nickname}}</li>
             <li>性别：{{info.sex}}</li>
+            <li>注册时间：{{info.reg_time}}</li>
           </ul>
         </div>
     </div>
     <div class="his-blog">
       <ul class="hot-article">
-        <li>
+        <li v-for="his in histrend">
           <router-link to="">
             <div class="article">
               <div class="hot-article-main">
                 <div class="title">
-
+                  <h2>{{his.t_title}}</h2>
                 </div>
                 <div class="content">
-
+                  <p>{{his.t_content}}</p>
                 </div>
               </div>
               <div class="article-img">
-                <img src="" alt=''/>
+                <img :src="his.t_img" alt=''/>
               </div>
             </div>
             <div class="author">
+              <h2>
+                作者：{{his.t_sender}}
+              </h2>
             </div>
           </router-link>
         </li>
@@ -50,7 +54,8 @@ export default {
   name: 'hello',
     data () {
       return {
-      talentinfo:""
+      talentinfo:"",
+        histrend:""
       }
   },
   components:{
@@ -66,6 +71,15 @@ export default {
     }).then((res)=>{
       this.talentinfo=JSON.parse(res.data);
       console.log(this.talentinfo);
+    });
+
+    Axios.get('http://localhost:3000/his-trend',{
+      params:{
+        u_id:uid
+      }
+    }).then((res)=>{
+      this.histrend=JSON.parse(res.data);
+      console.log(this.histrend);
     });
     }
 }
@@ -103,7 +117,14 @@ export default {
     border: 0.05rem solid #e41;
     right: 0.2rem;
   }
-
+  .geren-info{
+    font-size: 0.3rem;
+    text-align: left;
+    margin-top: 0.2rem;
+  }
+  .geren-info li{
+    margin-left: 0.3rem;
+  }
   .hot-article{
     margin-top: 0.2rem;
     background: #aaE793;
