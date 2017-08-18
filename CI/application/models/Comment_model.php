@@ -14,5 +14,26 @@
 			$query=$this->db->get();
 			return $query->result();
 		}
+		public function check_comment($arr){
+			// $this->db->select('count(*) as shuliang,c_id,c_time,c_content,c_trend_id,c_user_id');
+			$this->db->select('count(*) as shuliang');
+			$this->db->order_by('c_id','DESC');
+			$this->db->from('comments');
+			$this->db->where($arr);
+			$this->db->join('trends', 'trends.t_id = comments.c_trend_id');
+			$query=$this->db->get();
+			return $query->result();
+		}
+		public function show_comment($arr){
+			// $this->db->select('count(*) as shuliang,c_id,c_time,c_content,c_trend_id,c_user_id');
+			$this->db->select('*');
+			$this->db->order_by('c_id','DESC');
+			$this->db->from('comments');
+			$this->db->where($arr);
+			$this->db->join('trends', 'trends.t_id = comments.c_trend_id');
+			$this->db->join('users', 'comments.c_user_id = users.u_id');
+			$query=$this->db->get();
+			return $query->result();
+		}
 	}
 ?>

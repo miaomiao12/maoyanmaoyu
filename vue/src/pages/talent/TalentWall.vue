@@ -47,8 +47,8 @@ export default {
   @import "../../assets/css/reset.css";
   .talent-wall ul{
     display: flex;
-    height: 1rem;
-    background: #723377;
+    height: 1.2rem;
+    background: #adafae;
   }
   .talent-wall h3{
     font-size: 0.3rem;
@@ -75,6 +75,7 @@ export default {
   .daren li{
     font-size: 0.2rem;
     text-align: center;
+    margin-top: 0.15rem;
     line-height: 1.3rem;
   }
   .each-daren{
@@ -98,8 +99,9 @@ export default {
   }
   .daren-name{
     position: absolute;
-    top: 0.2rem;
-    left: 0.6rem;
+    top: 0.3rem;
+    height: 0.4rem;
+    left: 0.7rem;
 
   }
 </style>

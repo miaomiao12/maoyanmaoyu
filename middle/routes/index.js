@@ -158,4 +158,54 @@ router.get('/all_talent',function(req,res,next) {
 	});
 });
 
+router.get('/check_comment',function(req,res,next) {
+	var uid=req.query.u_id;
+    console.log(uid);
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/check_comment/'+uid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+router.get('/uncheck_comment',function(req,res,next) {
+	var uid=req.query.u_id;
+	console.log(uid);
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/uncheck_comment/'+uid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+            console.log("shishi");
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+router.get('/show_uncheck',function(req,res,next) {
+    var uid=req.query.u_id;
+    console.log(uid);
+    request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/show_uncheck/'+uid, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+            console.log("shishi");
+            result = body;
+            res.json(result);
+        }
+    });
+});
+
+router.get('/show_check',function(req,res,next) {
+    var uid=req.query.u_id;
+    console.log(uid);
+    request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/show_check/'+uid, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+            console.log("shishi");
+            result = body;
+            res.json(result);
+        }
+    });
+});
 module.exports = router;

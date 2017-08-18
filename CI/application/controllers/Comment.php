@@ -17,7 +17,8 @@ class Comment extends CI_Controller {
 			'c_id'=>'NULL',
 			'c_content'=>$content,
 			'c_time'=>time(),
-			'c_user_id'=>$uid
+			'c_user_id'=>$uid,
+			'c_check'=>'0'
 		);
 		$result = $this->Comment_model->addcomment($arr);
 		if($result){
@@ -33,6 +34,50 @@ class Comment extends CI_Controller {
 		);
 		$this->load->model('Comment_model');
 		$result = $this->Comment_model->all_comment($arr);
+		echo json_encode($result);
+	}
+	public function check_comment(){
+		$uid=$this->uri->segment(3);
+		$arr=array(
+			'c_check'=>'1',
+			'trends.t_sender'=>$uid
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->check_comment($arr);
+		// echo "0";
+		echo json_encode($result);
+	}
+	public function uncheck_comment(){
+		$uid=$this->uri->segment(3);
+		$arr=array(
+			'comments.c_check'=>'0',
+			'trends.t_sender'=>$uid
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->check_comment($arr);
+		// echo "1";
+		echo json_encode($result);
+	}
+	public function show_uncheck(){
+		$uid=$this->uri->segment(3);
+		$arr=array(
+			'comments.c_check'=>'0',
+			'trends.t_sender'=>$uid
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->show_comment($arr);
+		// echo "1";
+		echo json_encode($result);
+	}
+	public function show_check(){
+		$uid=$this->uri->segment(3);
+		$arr=array(
+			'comments.c_check'=>'1',
+			'trends.t_sender'=>$uid
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->show_comment($arr);
+		// echo "1";
 		echo json_encode($result);
 	}
 }
