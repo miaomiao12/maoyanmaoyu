@@ -2,9 +2,9 @@
   <div class="my-body">
     <div class="person-info" >
       <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
-      <div class="info">
-        <span class="u-name">昵称：</span>
-        <span class="u-id">账号：87798</span>
+      <div class="info" v-for="info in info">
+        <span class="u-name" >昵称：{{info.u_nickname}}</span>
+        <span class="u-id" >账号：{{info.u_name}}</span>
         <span class="person-home">个人主页 &gt;</span>
       </div>
 
@@ -31,16 +31,31 @@
 </template>
 
 <script>
+  import Axios  from 'axios'
+//  import jQuery from "../assets/js/jquery-1.12.4.min.js"
     export default{
       name: 'body',
+      data(){
+    return {
+      info: ""
+    }
+  },
+
       components: {
 
       },
+
       mounted:function() {
-//        Axios.get('http://localhost:3000')
-//          .then((res) => {
-//
-//        })
+        var _this = this;
+//        var  account=sessionStorage.getItem('u_id');
+        Axios.get("http://localhost:3000/users/myinfo",{
+          params:{
+            u_id:sessionStorage.getItem("u_id")
+          }
+        }).then((res) => {
+          console.log(res.data);
+          _this.info = JSON.parse(res.data);
+        })
       }
     }
 </script>

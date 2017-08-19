@@ -5,6 +5,7 @@
 			$query=$this->db->get('user');
 			return $query->result();
 		}
+		
 		public function add_user($username,$password,$reg_time){
             $arr = array(	'u_id' 		=> null,
                             'u_name' 	=> $username,
