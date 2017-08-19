@@ -80,6 +80,22 @@ class Comment extends CI_Controller {
 		// echo "1";
 		echo json_encode($result);
 	}
+	public function delete_com(){
+		$c_id=$this->uri->segment(3);
+		$arr=array(
+			'comments.c_id'=>$c_id
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->del_comment($arr);
+	}
+	public function check_com_status(){
+		$c_id=$this->uri->segment(3);
+		$arr=array(
+			'comments.c_id'=>$c_id
+		);
+		$this->load->model('Comment_model');
+		$result = $this->Comment_model->check_status($arr);
+	}
 }
 
 	

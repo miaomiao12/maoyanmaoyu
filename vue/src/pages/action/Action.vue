@@ -1,25 +1,27 @@
 <template>
   <div id="action">
-      <div class="close">
-        <router-link to="/index"><div class="issue-close"></div></router-link>
-      </div>
+      <common-header></common-header>
       <div class="issue-logo"></div>
       <div class="issue-kind">
           <div><router-link to="/action/actionphoto">发图文</router-link></div>
           <div><router-link to="/action/actionvideo">发视频</router-link></div>
           <div><router-link to="/action/actionquestion">提问题</router-link></div>
       </div>
-      <div class="issue">
-        <div class="issue-btn"></div>
-      </div>
+      <common-footer></common-footer>
   </div>
 </template>
 <script>
+  import CommonHeader from '../../components/CommonHeader'
+  import CommonFooter from '../../components/CommonFooter'
   export default {
     data(){
       return{
 
       }
+    },
+    components:{
+      CommonHeader,
+      CommonFooter
     },
     methods:{
 
@@ -35,8 +37,6 @@
     right: 0;
     bottom: 0;
     display: block;
-    opacity: 0.5;
-    background-color: #ccc;
   }
   .issue-close{
     width: 1rem;

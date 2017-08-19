@@ -17,7 +17,9 @@ import MyPage from '@/pages/mypage/MyPage'
 import IndexNewmiao from '@/pages/index/indexNewmiao'
 import AddCatalog from  '@/pages/index/AddCatalog'
 import Action from '@/pages/action/Action'
-
+import ActionPhoto from '@/pages/action/ActionPhoto'
+import ActionVideo from '@/pages/action/ActionVideo'
+import ActionQuestion from '@/pages/action/ActionQuestion'
 Vue.use(Router)
 
 export default new Router({
@@ -115,11 +117,21 @@ export default new Router({
       component: Action
     },
     {
+      path: "/action/actionphoto",
+      component: ActionPhoto
+    },
+    {
+      path: "/action/actionvideo",
+      component: ActionVideo
+    },
+    {
+      path: "/action/actionquestion",
+      component: ActionQuestion
+    },
+    {
       path:'/message',
       component:Message
     }
-
-
   ],
   mode: 'history'
 })
