@@ -208,4 +208,20 @@ router.get('/show_check',function(req,res,next) {
         }
     });
 });
+// Ìí¼ÓÍ¼ÎÄ¶¯Ì¬
+router.get('/insert_to_trends',function(req,res,next) {
+	var title = req.query.title;
+	var content = req.query.content;
+	console.log(title);
+	console.log(content);
+	/* var photo = req.query.photo;
+	 console.log(photo);*/
+	/*post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}}*/
+	request.post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}},function(error,response,body){
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			res.json(body);
+		}
+	});
+});
 module.exports = router;
