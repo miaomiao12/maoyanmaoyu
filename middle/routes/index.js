@@ -209,6 +209,7 @@ router.get('/show_check',function(req,res,next) {
     });
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 router.get('/del_comment',function(req,res,next) {
 	var cid=req.query.c_id;//评论commentid
@@ -235,6 +236,8 @@ router.get('/change_check',function(req,res,next) {
 });
 
 =======
+=======
+>>>>>>> 90e0e2737093bd16953a0a75f6208f7d13e56197
 // 添加图文动态
 router.get('/insert_to_trends',function(req,res,next) {
 	var title = req.query.title;
@@ -246,11 +249,18 @@ router.get('/insert_to_trends',function(req,res,next) {
 	/*post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}}*/
 	request.post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}},function(error,response,body){
 		if (!error && response.statusCode == 200) {
+<<<<<<< HEAD
 			console.log(body);
+=======
+			/*console.log(body);*/
+>>>>>>> 90e0e2737093bd16953a0a75f6208f7d13e56197
 			res.json(body);
 		}
 	});
 });
+<<<<<<< HEAD
 >>>>>>> 000c8854c054af3e9d66c2d0c61420d7dbd7bae9
+=======
+>>>>>>> 90e0e2737093bd16953a0a75f6208f7d13e56197
 module.exports = router;
 
