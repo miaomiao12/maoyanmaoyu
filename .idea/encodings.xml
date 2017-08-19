@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/node_modules/shelljs/shell.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/App.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/Login.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/Reg.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/index/Index.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/mypage/MyBody.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/mypage/MyHeader.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/pages/mypage/MyPage.vue" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vue/src/router/index.js" charset="UTF-8" />
+  </component>
+</project>
