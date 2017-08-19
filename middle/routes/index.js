@@ -219,7 +219,7 @@ router.get('/insert_to_trends',function(req,res,next) {
 	/*post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}}*/
 	request.post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}},function(error,response,body){
 		if (!error && response.statusCode == 200) {
-			console.log(body);
+			/*console.log(body);*/
 			res.json(body);
 		}
 	});
