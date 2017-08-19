@@ -3,24 +3,23 @@
     <div class="person-info" >
       <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
       <div class="info" v-for="info in info">
-        <span class="u-name" >昵称：{{info.u_nickname}}</span>
-        <span class="u-id" >账号：{{info.u_name}}</span>
-        <span class="person-home">个人主页 &gt;</span>
+        <span class="u-name" >monster：{{info.u_nickname}}</span>
+        <span class="u-id" >baby：{{info.u_name}}</span>
+        <span class="person-home"><router-link to="/person-home">个人主页 &gt;</router-link></span>
       </div>
-
     </div>
     <div class="my-baby">
       <ul>
         <li class="info">消息</li>
-        <li class="cart">购物车</li>
-        <li class="oder">我的订单</li>
-        <li class="address">收货地址管理</li>
-        <li class="growth">成长快乐</li>
+        <li class="cart"><router-link to="/buy-cart">购物车</router-link></li>
+        <li class="oder"><router-link to="/oder">我的订单</router-link></li>
+        <li class="address"><router-link to="/address">收货地址管理</router-link></li>
+        <li class="growth"><router-link to="/growth">成长快乐</router-link></li>
       </ul>
     </div>
     <div  class="cat-baby">
       <ul>
-        <li class="cat-friend">猫友</li>
+        <li class="cat-friend"><router-link to="friend">猫友</router-link></li>
         <li class="cat-circle">猫圈</li>
         <li class="collect">收藏</li>
         <li class="cut-account">切换账号</li>
@@ -63,6 +62,9 @@
 <style scoped>
   .my-body{
     z-index: 99;
+  }
+  .my-body a{
+    color: #ccc;
   }
   .person-info{
     flex: 1;
