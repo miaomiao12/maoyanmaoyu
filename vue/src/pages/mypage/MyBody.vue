@@ -2,9 +2,12 @@
   <div class="my-body">
     <div class="person-info" >
       <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
-      <span class="u-name">昵称：</span>
-      <span class="u-id">账号：87798</span>
-      <p class="person-home">个人主页 &gt;</p>
+      <div class="info">
+        <span class="u-name">昵称：</span>
+        <span class="u-id">账号：87798</span>
+        <span class="person-home">个人主页 &gt;</span>
+      </div>
+
     </div>
     <div class="my-baby">
       <ul>
@@ -70,14 +73,31 @@
     border: 0.05rem;
     /*background: #ce8483;*/
     color: #ccc;
-    position: absolute;
+    /*position: absolute;*/
     right: 0.5rem;
   }
-  .person-info span{
-    display: inline-block;
-  }
+
   .my-body .my-baby{
     width: 100%;
+  }
+
+  .info{
+    position: absolute;
+    top: -0.1rem;
+    left: 2rem;
+    height: 1.8rem;
+  }
+  .info .u-name,.u-id,.person-home{
+    width: 3rem;
+    position: absolute;
+  }
+  .info .u-name{
+    top: -0.4rem;
+    /*margin-bottom: 0.2rem;*/
+  }
+  .info .person-home{
+    top: 0.5rem;
+    left: 2.5rem;
   }
   .my-body .my-baby li{
     height: 1rem;
