@@ -35,5 +35,15 @@
 			$query=$this->db->get();
 			return $query->result();
 		}
+		public function del_comment($arr){
+			$query=$this->db->delete('comments',$arr);
+			return $query;
+		}
+		public function check_status($arr){
+			$this->db->set('c_check','1');
+			$this->db->where($arr);
+			$query=$this->db->update('comments');
+			return $query;
+		}
 	}
 ?>

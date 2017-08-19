@@ -208,4 +208,49 @@ router.get('/show_check',function(req,res,next) {
         }
     });
 });
+<<<<<<< HEAD
+
+router.get('/del_comment',function(req,res,next) {
+	var cid=req.query.c_id;//评论commentid
+	console.log(cid);
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/delete_com/'+cid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+router.get('/change_check',function(req,res,next) {
+	var cid=req.query.c_id;//评论commentid
+	console.log(cid);
+	request.get('http://127.0.0.1/maoyanmaoyu/CI/comment/check_com_status/'+cid, function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			result = body;
+			res.json(result);
+		}
+	});
+});
+
+=======
+// 添加图文动态
+router.get('/insert_to_trends',function(req,res,next) {
+	var title = req.query.title;
+	var content = req.query.content;
+	console.log(title);
+	console.log(content);
+	/* var photo = req.query.photo;
+	 console.log(photo);*/
+	/*post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}}*/
+	request.post({url:'http://127.0.0.1/miaomiaomiao/CI/action/add_to_trends',form:{title:title,content:content}},function(error,response,body){
+		if (!error && response.statusCode == 200) {
+			console.log(body);
+			res.json(body);
+		}
+	});
+});
+>>>>>>> 000c8854c054af3e9d66c2d0c61420d7dbd7bae9
 module.exports = router;
+
