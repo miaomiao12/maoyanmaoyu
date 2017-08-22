@@ -1,8 +1,8 @@
 <template>
   <div class="my-body">
-    <div class="person-info" >
-      <img src="../../assets/img/miaomiao1.jpg" alt="tx" class="head-photo"/>
-      <div class="info" v-for="info in info">
+    <div class="person-info" v-for="info in info" >
+      <img :src="info.head_img" alt="tx" class="head-photo"/>
+      <div class="info" >
         <span class="u-name" >monster：{{info.u_nickname}}</span>
         <span class="u-id" >baby：{{info.u_name}}</span>
         <span class="person-home"><router-link to="/person-home">个人主页 &gt;</router-link></span>
@@ -46,7 +46,8 @@
 
       mounted:function() {
         var _this = this;
-//        var  account=sessionStorage.getItem('u_id');
+        var  account=sessionStorage.getItem('u_id');
+        if(!account) _this.$router.push('/login');
         Axios.get("http://localhost:3000/users/myinfo",{
           params:{
             u_id:sessionStorage.getItem("u_id")
@@ -54,6 +55,7 @@
         }).then((res) => {
           console.log(res.data);
           _this.info = JSON.parse(res.data);
+//        console.log(res.data.head_img);
         })
       }
     }
