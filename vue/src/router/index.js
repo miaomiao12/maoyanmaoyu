@@ -20,6 +20,7 @@ import Action from '@/pages/action/Action'
 import ActionPhoto from '@/pages/action/ActionPhoto'
 import ActionVideo from '@/pages/action/ActionVideo'
 import ActionQuestion from '@/pages/action/ActionQuestion'
+import BuyCart from '@/components/BuyCart'
 
 Vue.use(Router)
 
@@ -132,6 +133,10 @@ export default new Router({
     {
       path:'/message',
       component:Message
+    },
+    {
+      path: '/buy-cart',
+      component:BuyCart
     }
   ],
   mode: 'history'
