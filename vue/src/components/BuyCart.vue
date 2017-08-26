@@ -53,6 +53,8 @@
       data ()
     {
       return {
+        totalPrice: 0,
+        animatenum: 0,
         message: [
           {
             id: 111,
@@ -78,11 +80,6 @@
         ]
       }
     },
-      watch:{
-        toComput2:function(newValue,oldValue){
-          this.tween(newValue,oldValue);
-        }
-      },
       computed:{
         toComput2:function(){
           var vm=this;
@@ -97,64 +94,47 @@
       filters:{
         filtermoney:function(value){
           return '￥'+value ;
-        },
-        mounted:function() {
-          this.tween('97000','0');
-        },
-        methods:{
-          toComput:function(){
-            var vm=this;
-            //每次进来要重置总金额
-            vm.totalPrice=0;
-            this.message.forEach(function(mess){
-              vm.totalPrice+=parseInt(mess.price*mess.quantity);
-            })
-            return this.totalPrice;
-          },
-          add:function(index){
-            var vm = this;
-            vm.message[index].quantity++;
-          },
-          subtract:function(index){
-            var vm = this;
-            vm.message[index].quantity--;
-            if(vm.message[index].quantity<=0) {
-              if (confirm("你确定移除该商品？")) {
-                vm.message.splice(index,1)
-              }
-            }
-          },
-          remove:function(index){
-            var vm = this;
-            if (confirm("你确定移除此商品？")) {
-              vm.message.splice(index,1);
-            }
-          },
-          empty:function() {
-            var vm = this;
-            vm.message.splice(0,vm.message.length);
-          },
-          jia:function(index) {
-            var vm = tihs;
-            vm.arr[index].one++;
-          },
-          tween:function(newValue,oldValue) {
-            var vm=this;
-            var twen=new TWEEN.Tween({animatenum:oldValue});
-            function animate() {
-              requestAnimationFrame(animate);
-              TWEEN.update();
-            };
-            twen.to({animatenum:newValue},750);
-            twen.onUpdate(function(){
-              //toFixed();保留几位小数
-              vm.animatenum = this.animatenum.toFixed();
-            })
-            twen.start();
-            animate();
+        }
+      },
+    methods:{
+      toComput:function(){
+        console.log(this);
+        var vm=this;
+        //每次进来要重置总金额
+        vm.totalPrice=0;
+        this.message.forEach(function(mess){
+          vm.totalPrice+=parseInt(mess.price*mess.quantity);
+        })
+        return this.totalPrice;
+      },
+      add:function(index){
+        var vm = this;
+        vm.message[index].quantity++;
+      },
+      subtract:function(index){
+        var vm = this;
+        vm.message[index].quantity--;
+        if(vm.message[index].quantity<=0) {
+          if (confirm("你确定移除该商品？")) {
+            vm.message.splice(index,1)
           }
         }
+      },
+      remove:function(index){
+        var vm = this;
+        if (confirm("你确定移除此商品？")) {
+          vm.message.splice(index,1);
+        }
+      },
+      empty:function() {
+        var vm = this;
+        vm.message.splice(0,vm.message.length);
+      },
+      jia:function(index) {
+        var vm = tihs;
+        vm.arr[index].one++;
       }
+    }
     }
 </script>
 
